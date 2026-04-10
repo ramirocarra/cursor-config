@@ -1,0 +1,13 @@
+---
+description: Minimal diffs, match codebase style, no drive-by refactors or unrelated deletions
+alwaysApply: true
+---
+
+# Scoped code changes
+
+- Change **only** what the task requires. No drive-by refactors, unrelated files, or scope creep. A small focused diff beats a large “cleanup” diff.
+- **Do not** create or edit markdown/docs the user did not ask for (repo `README` / `AGENTS` only when requested or clearly part of the task).
+- **Read surrounding code first.** Match naming, types, patterns, import style, and documentation level so additions look native.
+- **Reuse** existing helpers/components instead of duplicating similar logic.
+- **Do not** delete unrelated comments or code; that obscures the diff.
+- Avoid obvious-only comments and docstrings; prefer clear code and names.

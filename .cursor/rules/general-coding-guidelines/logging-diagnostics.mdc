@@ -1,0 +1,9 @@
+---
+description: Structured logging levels; no print/println/console.log in library or service code
+alwaysApply: true
+---
+
+# Logging
+
+- **Do not** use `println!`, `print`, `console.log`, etc. for diagnostics in **library or service** code—use the project’s structured logger.
+- **Levels:** `debug` transient internal state; `info` normal lifecycle; `warn` recoverable surprises; `error` needs attention.

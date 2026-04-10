@@ -1,0 +1,27 @@
+---
+description: Rust fmt, clippy, check; types, defaults, iterators, Clone/Copy
+globs: "**/*.rs"
+alwaysApply: false
+---
+
+# Rust
+
+## After changes
+
+- Run **`cargo check`**, **`cargo fmt`**, and **`cargo clippy`**. Apply clippy fixes; ask before `#[allow(...)]` when tradeoffs are unclear. `cargo build` is optional unless the task needs it.
+
+## Error context
+
+- Use `anyhow::Context` / `with_context` (or project equivalent) so errors carry what was being attempted and key inputs—without reading the source.
+
+## Defaults and iterators
+
+- Prefer `unwrap_or_else` / `unwrap_or_default` over `unwrap_or` when the default **allocates or computes**—lazy default evaluation.
+- Use `filter_map` when the closure returns `Option`; use `flatten` / `flat_map` only when it returns an iterable.
+
+## `Clone`, `Copy`, and derives
+
+- Derive or implement `Clone` only when a call site, macro (e.g. Diesel `Insertable`), or generic bound requires it—verify call sites before adding. Do not add `Clone` speculatively.
+- When deriving `Copy`, include `Clone` (required supertrait). Order as `Copy, Clone` for clarity.
+- Remove unused `Clone`/`Copy` derives—they mislead readers about data flow.
+- If both a copy and a move are needed, **copy first** then move the original to avoid a second copy.

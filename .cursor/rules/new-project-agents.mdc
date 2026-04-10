@@ -1,0 +1,9 @@
+---
+description: New Cursor projects—copy relevant guidelines into AGENTS.md and/or project .cursor/rules
+alwaysApply: true
+---
+
+# New project initialization (Cursor)
+
+- When **starting a new project** you plan to work on in Cursor, copy the **relevant** guidelines from your user rules and skills into the repo’s **`AGENTS.md`** so the project stays self-contained for any agent.
+- Add **project** rules under **`.cursor/rules/`** (`.mdc` files) when you need file-scoped or always-on guidance that should live in version control with that codebase—not only in your global Cursor rules.

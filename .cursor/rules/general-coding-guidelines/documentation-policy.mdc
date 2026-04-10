@@ -1,0 +1,17 @@
+---
+description: When to comment; function documentation only when names are insufficient
+alwaysApply: true
+---
+
+# Comments and documentation
+
+## Comments
+
+- Do **not** over-comment; keep density consistent with the file.
+- Add comments only when the code **does not** explain **why** (not what) something is done.
+- Comments must refer to the **codebase only**—not the chat session or external narrative.
+
+## Function documentation
+
+- For languages that support docs: add documentation a caller would need (behavior, args, errors) when the **name and parameters are not enough** on their own.
+- Skip docs when the signature already fully explains the function.

@@ -1,0 +1,9 @@
+---
+description: Structured error-context APIs and unified code paths—not ad-hoc error strings
+alwaysApply: true
+---
+
+# Error context
+
+- Use the language’s **structured error-context** APIs so failures identify the operation without reading source.
+- Prefer **unified** code paths over many one-off special cases when both stay clear.

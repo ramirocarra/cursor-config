@@ -1,0 +1,9 @@
+---
+description: Do not run git commands unless the user explicitly asks
+alwaysApply: true
+---
+
+# Git commands
+
+- **Do not** run `git` (e.g. `git status`, `git add`, `git commit`, `git push`, `git pull`, `git diff`, branch or remote operations) unless the user **explicitly** asks you to use git or to run a specific git command.
+- Other shell work (builds, tests, file ops) is unaffected by this rule.

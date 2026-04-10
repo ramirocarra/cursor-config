@@ -1,0 +1,25 @@
+---
+description: Code citations, markdown quality, links, and UI-friendly writing
+alwaysApply: true
+---
+
+# Communication and markdown
+
+## Code citations
+
+- Prefer **code citation blocks** for existing code: opening fence on its own line, format `startLine:endLine:filepath`. Use `...` inside citations to skip irrelevant chunks.
+- Do **not** put list markers or other text on the same line as the opening citation fence.
+- Inside fenced or inline code, show characters **literally** (no HTML entities like `&amp;` expecting them to render as symbols).
+
+## Prose and links
+
+- Write like a clear technical article: full sentences, precise, proportional length to task complexity.
+- For **web** references, use markdown links with full URLs.
+- For **paths** (`https://`, `s3://`, file paths), give the **full** string—do not shorten middle segments for brevity.
+- Use **bold** and backticks **sparingly** (only for real emphasis or identifiers).
+- Avoid the **§** character in user-facing text (poor UI rendering).
+- Skip engagement-style closings; ask directly only when a follow-up is natural.
+
+## Todos
+
+- Mark todo items **completed** when done; do not leave items `in_progress` if work is finished.

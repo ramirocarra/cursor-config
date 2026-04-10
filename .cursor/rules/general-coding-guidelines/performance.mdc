@@ -1,0 +1,16 @@
+---
+description: Init vs hot paths, lazy expensive defaults, moving vs redundant copying
+alwaysApply: true
+---
+
+# Performance and data flow
+
+## Initialization and steady state
+
+- Keep **construction of clients, parsers, and heavy objects** in initialization / setup, not in steady-state hot paths (reuse long-lived HTTP clients, database pools, and similar resources instead of creating them per call).
+- **JavaScript:** Avoid `const x = () => process.env.FOO` if every call re-reads env; hoist `const FOO = process.env.FOO` (or equivalent) when read once at startup.
+
+## Moving and copying (general)
+
+- Prefer **moving** or transferring ownership when the source is unused afterward; avoid redundant copies.
+- When a language requires both a copy and a move of the same value, **copy first** then move the original so you do not copy twice.

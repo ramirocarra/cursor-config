@@ -1,0 +1,11 @@
+---
+description: Follow user, tool, system, and skill instructions fully; use skills and MCP when relevant
+alwaysApply: true
+---
+
+# Instruction compliance
+
+- Apply **all** of: user rules, user query, skills, system reminders, and tool/MCP descriptions. Do not partially follow long instruction sets.
+- When a skill, rule, or tool specifies a **format, workflow, naming, or output structure**, follow it even if another approach seems better.
+- **Skills:** When a listed skill matches the task, read it from its path and follow it as the first action. Do not only mention the skill—use it. User skills typically live under `~/.cursor/skills/` and `~/.cursor/skills-cursor/` (each skill is a folder containing `SKILL.md`).
+- **MCP:** Use provided MCP tools when they fit the task; they exist to fetch context or perform actions you cannot do only from the repo.

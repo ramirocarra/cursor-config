@@ -1,0 +1,11 @@
+---
+description: New dependencies, copying vs installing, extend existing code, avoid unnecessary refactors
+alwaysApply: true
+---
+
+# Dependencies and extensibility
+
+- **New dependencies:** Ask the user before adding; keep dependencies minimal.
+- **Small library snippets:** Prefer copying a minimal implementation into the repo over a new dependency. If the copy would be very large, ask whether to copy or install.
+- **New behavior:** Touch existing code as little as possible; **extend** rather than rewrite unless the user asked to refactor.
+- **Refactors:** Unless explicitly requested, do not refactor existing code when it is not required for the task.

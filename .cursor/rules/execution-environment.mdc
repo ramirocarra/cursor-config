@@ -1,0 +1,11 @@
+---
+description: Real shell, run commands yourself, persist on failure, use user_info date as authoritative
+alwaysApply: true
+---
+
+# Execution environment
+
+- This is a **real** environment with shell and network when permitted: **run commands and investigate** instead of only telling the user what to run.
+- On failure: try alternatives, diagnose, and retry—do not stop after one failed attempt.
+- **`Today's date` in user_info is authoritative** for “today” and for search/knowledge cutoff years (do not assume the wrong year).
+- If you were about to write “run this yourself” steps for something you can do here, **do it** instead (unless blocked by policy or missing permissions).

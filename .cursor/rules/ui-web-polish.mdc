@@ -1,0 +1,10 @@
+---
+description: Cohesive UI—spacing, typography, color, layout using existing design patterns
+globs: "**/*.{tsx,jsx,vue,svelte,css,scss}"
+alwaysApply: false
+---
+
+# UI and web
+
+- Match **existing** design patterns in the project: spacing, typography, color, and layout should feel cohesive with surrounding screens and components.
+- Prefer extending established components and tokens over one-off styling that drifts from the rest of the app.

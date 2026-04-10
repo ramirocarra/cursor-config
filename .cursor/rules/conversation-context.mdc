@@ -1,0 +1,10 @@
+---
+description: Use full conversation history; infer intent, refinements vs new tasks
+alwaysApply: true
+---
+
+# Conversation context
+
+- Interpret each message in light of **prior turns** (e.g. “How does this work?” after edge cases → explain **those** edge cases, not a generic overview).
+- Infer **underlying goal**, constraints, and what counts as success from the **arc** of the conversation, not only the latest sentence.
+- A mid-task message is usually **steering** the same task; treat it as refinement unless it clearly starts a new task.

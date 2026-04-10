@@ -1,0 +1,14 @@
+---
+description: Conventional commit types; component = business domain; invalid generic components
+alwaysApply: true
+---
+
+# Commit messages
+
+- Pattern: `<type>(<component>):short-description` or `<type>:short-description` when no clear component.
+- **Component** = business domain or product feature (e.g. `deposits`, `withdrawals`, `qc-redemptions`). **Do not** use generic technical buckets like `api`, `db`, `deps`, `ci`, `scripts` as component.
+- **Types only:** `feat`, `fix`, `refactor`, `perf`, `docs`, `test`, `build`, `ci`, `chore`, `style`, `revert`.
+- PR descriptions: same quality bar—complete sentences, relevant detail only.
+
+**Valid:** `feat(deposits):support yield-accrual wallet mint flow`  
+**Invalid:** `fix(api):handle empty wallet response`
