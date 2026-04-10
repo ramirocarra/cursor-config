@@ -2,10 +2,10 @@
 # Ignore everything in .cursor
 *
 # Un-ignore projects so we can descend to allowlisted subdirs
-!projects/
-projects/*
-!projects/*/
-projects/*/*
+# !projects/
+# projects/*
+# !projects/*/
+# projects/*/*
 # MCP tool descriptors, resources, prompts
 !projects/*/mcps/
 !projects/*/mcps/**
